@@ -20,8 +20,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      # PULEI A ETAPA DE PIP INSTALL QUE DAVA ERRO
-      # VAMOS DIRETO EMPACOTAR O CÓDIGO
+      # REMOVI A ETAPA DE INSTALAÇÃO QUE DAVA ERRO
+      # VAMOS DIRETO PARA O EMPACOTAMENTO
 
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v4
@@ -45,7 +45,7 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          # MANTIVE SEUS SEGREDOS ORIGINAIS AQUI
+          # MANTIVE SEUS CÓDIGOS SECRETOS AQUI
           client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_A1765210DEB74BC2BD5B1A4A1363C1FA }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_F1FF8ED78DC246B4816E38985C4FC632 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_5E7494E5492F4F0AA1192AA0BFB52673 }}
